@@ -1,0 +1,24 @@
+{
+  "name": "quiz-energia",
+  "version": "1.0.0",
+  "description": "Interactive web-based quiz game about renewable and sustainable energy sources",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/quizenergia.git"
+  },
+  "keywords": [
+    "quiz",
+    "game",
+    "energy",
+    "renewable",
+    "sustainability",
+    "education"
+  ],
+  "scripts": {
+    "serve": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 serve",
+    "dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1",
+    "help": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1 help"
+  }
+}
