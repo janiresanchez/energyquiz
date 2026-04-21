@@ -228,6 +228,12 @@ function handleAnswer(selectedOptionIndex) {
 
   explanationEl.textContent = currentQuestion.explanation;
   explanationBoxEl.classList.add("visible");
+  
+  // Cambiar el texto del botón si es la última pregunta
+  if (currentQuestionIndex === quizQuestions.length - 1) {
+    nextBtn.textContent = "Finalizar quiz";
+  }
+  
   nextBtn.disabled = false;
 }
 
