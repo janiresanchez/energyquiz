@@ -230,8 +230,13 @@ function handleAnswer(selectedOptionIndex) {
   explanationBoxEl.classList.add("visible");
   
   // Cambiar el texto del botón si es la última pregunta
+  console.log("Pregunta actual:", currentQuestionIndex, "Total preguntas:", quizQuestions.length - 1);
   if (currentQuestionIndex === quizQuestions.length - 1) {
+    console.log("Es la última pregunta, cambiando texto a 'Finalizar quiz'");
     nextBtn.textContent = "Finalizar quiz";
+  } else {
+    console.log("No es la última pregunta, manteniendo 'Siguiente pregunta'");
+    nextBtn.textContent = "Siguiente pregunta";
   }
   
   nextBtn.disabled = false;
