@@ -181,6 +181,13 @@ function renderQuestion() {
   answersContainerEl.innerHTML = "";
   displayedOptions = shuffleOptions(currentQuestion.options);
 
+  // Cambiar el texto del botón si es la última pregunta
+  if (currentQuestionIndex === quizQuestions.length - 1) {
+    nextBtn.textContent = "Finalizar quiz";
+  } else {
+    nextBtn.textContent = "Siguiente pregunta";
+  }
+
   displayedOptions.forEach((option, optionIndex) => {
     const answerButton = document.createElement("button");
     answerButton.className = "answer-btn";
