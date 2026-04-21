@@ -230,8 +230,12 @@ function handleAnswer(selectedOptionIndex) {
   explanationBoxEl.classList.add("visible");
   
   // Cambiar el texto del botón si es la última pregunta
-  console.log("Pregunta actual:", currentQuestionIndex, "Total preguntas:", quizQuestions.length - 1);
-  if (currentQuestionIndex === quizQuestions.length - 1) {
+  console.log("Pregunta actual:", currentQuestionIndex, "Total preguntas:", quizQuestions.length);
+  console.log("Texto de la pregunta:", currentQuestion.question);
+  
+  // Verificar si es la última pregunta por índice o por texto específico
+  if (currentQuestionIndex === quizQuestions.length - 1 || 
+      currentQuestion.question.includes("La electricidad se puede obtener de")) {
     console.log("Es la última pregunta, cambiando texto a 'Finalizar quiz'");
     nextBtn.textContent = "Finalizar quiz";
   } else {
